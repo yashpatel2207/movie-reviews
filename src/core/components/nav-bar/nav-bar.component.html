@@ -1,13 +1,12 @@
-<nav class="navbar navbar-expand-md navbar-dark dark-mode">
-  <a class="navbar-brand" href="#">
-    MovieHub
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav">
+<nav class="navbar dark-mode">
+  <div class="left-align-items">
+    <button class="navbar-toggler">
+      <i class="fas fa-bars"></i>
+    </button>
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/logo.png" title="logo" width="50" />
+    </a>
+    <ul role="navigation">
       <li class="nav-item">
         <div class="dropdown">
           <span class="navbar-text dropbtn">Movies</span>
@@ -30,14 +29,14 @@
           </div>
         </div>
       </li>
-      <li class="nav-item">
-        <span class="navbar-text">
-          <i class="fas fa-user"></i>
-        </span>
-      </li>
     </ul>
-    <div class="search">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  </div>
+  <div class="right-align-items">
+    <div class="navbar-text d-inline-block mx-3" title="Login">
+      <i class="fas fa-user"></i>
+    </div>
+    <div class="search d-inline-block mx-3">
+      <i class="fas fa-search" title="Search"></i>
     </div>
   </div>
 </nav>
