@@ -2,6 +2,7 @@
 
 .navbar-toggler {
   display: none;
+  padding: 0;
   color: $dark-mode-text-color;
 }
 
@@ -9,6 +10,7 @@ nav.navbar {
   justify-content: flex-start;
   ul {
     display: flex;
+    flex-flow: row wrap;
     list-style-type: none;
     align-items: center;
     margin: 0 15px;
@@ -24,23 +26,30 @@ nav.navbar {
     i:not(:last-child) {
       margin: 0 15px;
     }
-    .fa-search {
-        cursor: pointer;
-    }
   }
 }
 
-@include when-smaller-than('md') {
-   .navbar-toggler {
-       display: block;
-       flex: 1;
-   }
-   .nav-item {
-       display: none;
-   }
-   .navbar-brand {
-       margin: 0;
-   }
+@include when-smaller-than("md") {
+  .navbar-toggler {
+    display: block;
+    flex: 1;
+    order: 1;
+  }
+  .nav-item {
+    display: none;
+    width: 100%;
+    text-align: center;
+    order: 4;
+  }
+  .navbar-brand {
+    margin: 0;
+  }
+  .logo {
+    order: 2;
+  }
+  .nav-right-items {
+    order: 3;
+  }
 }
 
 .dropdown {

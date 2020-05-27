@@ -1,14 +1,14 @@
 <nav class="navbar dark-mode">
   <ul role="navigation">
-    <li class="navbar-toggler">
-        <i class="fas fa-bars"></i>
+    <li class="navbar-toggler" (click)="toggleClasses()">
+        <i class="fas cusor-pointer" [ngClass]="collapsed ? 'fa-bars' : 'fa-times'"></i>
     </li>
     <li class="logo">
       <a class="navbar-brand" href="#">
         <img src="../../../assets/logo.png" title="logo" width="50" />
       </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" [ngClass]="{'d-block': !collapsed}">
       <div class="dropdown">
         <span class="navbar-text dropbtn">Movies</span>
         <div class="dropdown-content dropdown-menu">
@@ -19,7 +19,7 @@
         </div>
       </div>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" [ngClass]="{'d-block': !collapsed}">
       <div class="dropdown">
         <span class="navbar-text dropbtn">TV Shows</span>
         <div class="dropdown-content dropdown-menu">
@@ -32,7 +32,7 @@
     </li>
     <li class="nav-right-items">
       <i class="fas fa-user"></i>
-      <i class="fas fa-search" title="Search"></i>
+      <i class="fas fa-search cusor-pointer" title="Search"></i>
     </li>
   </ul>
 </nav>
