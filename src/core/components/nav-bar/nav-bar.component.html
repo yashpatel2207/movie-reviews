@@ -10,23 +10,23 @@
     </li>
     <li class="nav-item" [ngClass]="{'d-block': !collapsed}">
       <div class="dropdown">
-        <span class="navbar-text dropbtn">Movies</span>
-        <div class="dropdown-content dropdown-menu">
-          <a href="#">Popular</a>
-          <a href="#">Now Playing</a>
-          <a href="#">Upcoming</a>
-          <a href="#">Top Rated</a>
+        <a class="dropdown-toggle" href="#" id="movie-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
+        <div class="dropdown-menu" aria-labelledby="movie-menu">
+          <a class="dropdown-item" href="#">Popular</a>
+          <a class="dropdown-item" href="#">Now Playing</a>
+          <a class="dropdown-item" href="#">Upcoming</a>
+          <a class="dropdown-item" href="#">Top Rated</a>
         </div>
       </div>
     </li>
     <li class="nav-item" [ngClass]="{'d-block': !collapsed}">
       <div class="dropdown">
-        <span class="navbar-text dropbtn">TV Shows</span>
-        <div class="dropdown-content dropdown-menu">
-          <a href="#">Popular</a>
-          <a href="#">Airing Today</a>
-          <a href="#">On TV</a>
-          <a href="#">Top Rated</a>
+        <a class="dropdown-toggle" href="#" id="tv-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TV Shows</a>
+        <div class="dropdown-menu" aria-labelledby="tv-menu">
+          <a class="dropdown-item" href="#">Popular</a>
+          <a class="dropdown-item" href="#">Airing Today</a>
+          <a class="dropdown-item" href="#">On TV</a>
+          <a class="dropdown-item" href="#">Top Rated</a>
         </div>
       </div>
     </li>
