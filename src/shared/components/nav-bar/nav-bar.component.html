@@ -8,25 +8,11 @@
         <img src="../../../assets/logo.png" title="logo" width="50" />
       </a>
     </li>
-    <li class="nav-item" [ngClass]="{'d-block': !collapsed}">
+    <li class="nav-item" [ngClass]="{'d-block': !collapsed}" *ngFor="let item of menuItems">
       <div class="dropdown">
-        <a class="dropdown-toggle" href="#" id="movie-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
-        <div class="dropdown-menu" aria-labelledby="movie-menu">
-          <a class="dropdown-item" href="#">Popular</a>
-          <a class="dropdown-item" href="#">Now Playing</a>
-          <a class="dropdown-item" href="#">Upcoming</a>
-          <a class="dropdown-item" href="#">Top Rated</a>
-        </div>
-      </div>
-    </li>
-    <li class="nav-item" [ngClass]="{'d-block': !collapsed}">
-      <div class="dropdown">
-        <a class="dropdown-toggle" href="#" id="tv-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TV Shows</a>
-        <div class="dropdown-menu" aria-labelledby="tv-menu">
-          <a class="dropdown-item" href="#">Popular</a>
-          <a class="dropdown-item" href="#">Airing Today</a>
-          <a class="dropdown-item" href="#">On TV</a>
-          <a class="dropdown-item" href="#">Top Rated</a>
+        <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{item.menuItemName}}</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" [routerLink]="[subItem.path]" *ngFor="let subItem of item.subMenus">{{subItem.name}}</a>
         </div>
       </div>
     </li>
