@@ -5,17 +5,17 @@ $breakpoints: (
 );
 
 @function get-breakpoint($target) {
-  @if map-has-key($breakpoints, $target) {
-    @return map-get($breakpoints, $target);
-  } @else {
+  $breakpoint: map-get($breakpoints, $target);
+  @if $breakpoint == null {
     @warn "Unfortunately, no value could be retrieved from `#{$target}`. "
             + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
+  @return $breakpoint;
 }
 
 @mixin when-wider-than($target) {
   @media screen and (min-width: get-breakpoint($target)) {
-	@content;
+    @content;
   }
 }
 
