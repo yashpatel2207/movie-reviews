@@ -39,6 +39,11 @@ nav.navbar {
   }
 }
 
+.dropdown-menu {
+  animation: scale-down 400ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
 @include when-smaller-than("md") {
   .navbar-toggler {
     display: block;
