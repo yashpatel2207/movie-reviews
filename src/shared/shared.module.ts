@@ -1,13 +1,12 @@
-import { SearchBarComponent } from './components/nav-bar/search-bar/search-bar.component';
 import { RouterModule } from "@angular/router";
-import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { OutsideClickDirective } from './directives/outside-click.directive';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  declarations: [NavBarComponent, SearchBarComponent],
+  declarations: [OutsideClickDirective],
   providers: [],
-  exports: [NavBarComponent],
+  exports: [OutsideClickDirective],
 })
 export class SharedModule {}
