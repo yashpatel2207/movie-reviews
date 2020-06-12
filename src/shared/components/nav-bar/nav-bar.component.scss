@@ -1,9 +1,13 @@
-@import "../../styles/utils";
+@import "common";
 
 .navbar-toggler {
   display: none;
   padding: 0;
   color: $dark-mode-text-color;
+}
+
+.search-box {
+  flex-basis: 100%;
 }
 
 a {

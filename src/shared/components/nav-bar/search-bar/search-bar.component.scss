@@ -1,0 +1,15 @@
+@import "common";
+
+.search-box-wrapper {
+    width: 450px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+@include when-smaller-than("sm") {
+    .search-box-wrapper {
+        width: 350px;
+    }
+}
