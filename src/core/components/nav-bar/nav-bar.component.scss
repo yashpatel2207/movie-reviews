@@ -1,83 +1,87 @@
 @import "common";
 
 .navbar-toggler {
-  display: none;
-  padding: 0;
-  color: $dark-mode-text-color;
+	display: none;
+	padding: 0;
+	color: $dark-mode-text-color;
 }
 
 .search-box {
-  animation: slide-in 400ms ease-in forwards;
+	animation: slide-in 400ms ease-in forwards;
 }
 
 a {
-  &.dropdown-toggle {
-    text-decoration: none;
-    color: $dark-mode-text-color;
-    &::after{
-      vertical-align: middle;
-    }
-  }
+	&.dropdown-toggle {
+		text-decoration: none;
+		color: $dark-mode-text-color;
+		&::after {
+			vertical-align: middle;
+		}
+	}
 }
 
 nav.navbar {
-  justify-content: flex-start;
-  ul {
-    display: flex;
-    flex-flow: row wrap;
-    list-style-type: none;
-    align-items: center;
-    margin: 0 15px;
-    padding: 0;
-    width: 100%;
-    li.nav-item {
-      margin: 0 15px;
-    }
-  }
-  .nav-right-items {
-    text-align: right;
-    flex: 1;
-    i:not(:last-child) {
-      margin: 0 15px;
-    }
-  }
+	justify-content: flex-start;
+	ul {
+		display: flex;
+		flex-flow: row wrap;
+		list-style-type: none;
+		align-items: center;
+		margin: 0 15px;
+		padding: 0;
+		width: 100%;
+		li:not(.search-box) {
+			animation: fade-up 400ms linear both;
+			&.nav-item {
+				margin: 0 15px;
+			}
+		}
+	}
+	.nav-right-items {
+		text-align: right;
+		flex: 1;
+		i:not(:last-child) {
+			margin: 0 15px;
+		}
+	}
 }
 
 .dropdown-menu {
-  animation: scale-down 400ms ease-in-out forwards;
-  transform-origin: top center;
+	animation: scale-down 400ms ease-in-out forwards;
+	transform-origin: top center;
 }
 
 @include when-smaller-than("md") {
-  .navbar-toggler {
-    display: block;
-    flex: 1;
-    order: 1;
-  }
-  .dropdown-menu {
-    position: static;
-    float: none;
-    text-align: center;
-  }
-  .dropdown-item {
-    &:hover {
-      background-color: $dark-mode-secondary;
-    }
-  }
-  .nav-item {
-    display: none;
-    width: 100%;
-    text-align: center;
-    order: 4;
-    padding: 10px 0;
-  }
-  .navbar-brand {
-    margin: 0;
-  }
-  .logo {
-    order: 2;
-  }
-  .nav-right-items {
-    order: 3;
-  }
+	.navbar-toggler {
+		display: block;
+		flex: 1;
+		order: 1;
+	}
+	.dropdown-menu {
+		position: static;
+		float: none;
+		text-align: center;
+	}
+	.dropdown-item {
+		&:hover {
+			background-color: $dark-mode-secondary;
+		}
+	}
+	.nav-item {
+		display: none;
+		width: 100%;
+		text-align: center;
+		order: 4;
+		padding: 10px 0;
+		animation: none !important;
+	}
+	.navbar-brand {
+		margin: 0;
+	}
+	.logo {
+		order: 2;
+	}
+	.nav-right-items {
+		order: 3;
+	}
 }
