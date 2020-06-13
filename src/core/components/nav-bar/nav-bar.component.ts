@@ -36,7 +36,11 @@ export class NavBarComponent implements OnInit {
 	toggleClasses(): void {
 		this.collapsed = !this.collapsed;
 	}
-	showSearchBox(): void {
-    this.showSearch = true;
-  }
+	showSearchBox(event: MouseEvent): void {
+		this.showSearch = true;
+		event.stopPropagation();
+	}
+	hideSearchBox(): void {
+		this.showSearch = false;
+	}
 }

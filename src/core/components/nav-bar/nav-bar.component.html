@@ -1,5 +1,5 @@
 <nav class="navbar dark-mode">
-  <ul role="navigation">
+  <ul role="navigation" [class.justify-content-center]="showSearch">
     <ng-container *ngIf="!showSearch; else search">
       <li class="navbar-toggler" (click)="toggleClasses()">
         <i class="fas cusor-pointer" [ngClass]="collapsed ? 'fa-bars' : 'fa-times'"></i>
@@ -18,13 +18,13 @@
         </div>
       </li>
       <li class="nav-right-items">
-        <i class="fas fa-search cusor-pointer" title="Search" (click)="showSearchBox()"></i>
+        <i class="fas fa-search cusor-pointer" title="Search" (click)="showSearchBox($event)"></i>
         <i class="fas fa-user"></i>
       </li>
     </ng-container>
     <ng-template #search>
       <li class="search-box">
-        <app-search-bar></app-search-bar>
+        <app-search-bar (closeSearchBox)="hideSearchBox()"></app-search-bar>
       </li>
     </ng-template>
   </ul>
