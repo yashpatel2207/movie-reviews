@@ -1,13 +1,13 @@
-import { HeaderMenuItem } from "./nav-typings.d";
+import { HeaderMenuItem } from "./header-typings";
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
-	selector: "app-nav-bar",
-	templateUrl: "./nav-bar.component.html",
-	styleUrls: ["./nav-bar.component.scss"],
+	selector: "app-header",
+	templateUrl: "./header.component.html",
+	styleUrls: ["./header.component.scss"],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavBarComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 	constructor() {}
 	collapsed = true;
 	showSearch = false;
