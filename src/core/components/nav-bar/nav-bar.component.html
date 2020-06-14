@@ -9,7 +9,7 @@
           <img src="../../../assets/logo.png" title="logo" width="50" />
         </a>
       </li>
-      <li class="nav-item" [ngClass]="{'d-block': !collapsed}" *ngFor="let item of menuItems">
+      <li class="nav-item" [class.d-block]="!collapsed" *ngFor="let item of menuItems">
         <div class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{item.menuItemName}}</a>
           <div class="dropdown-menu">
@@ -24,7 +24,7 @@
     </ng-container>
     <ng-template #search>
       <li class="search-box">
-        <app-search-bar (closeSearchBox)="hideSearchBox()"></app-search-bar>
+        <app-search-view (closeSearchBox)="hideSearchBox()"></app-search-view>
       </li>
     </ng-template>
   </ul>

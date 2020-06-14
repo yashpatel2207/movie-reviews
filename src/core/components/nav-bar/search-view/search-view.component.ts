@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
-	selector: "app-search-bar",
-	templateUrl: "./search-bar.component.html",
-	styleUrls: ["./search-bar.component.scss"],
+	selector: "app-search-view",
+	templateUrl: "./search-view.component.html",
+	styleUrls: ["./search-view.component.scss"],
 })
-export class SearchBarComponent implements OnInit {
+export class SearchViewComponent implements OnInit {
 	constructor() {}
 
 	@Input() placeholder = "Search...";
